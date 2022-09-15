@@ -32,6 +32,6 @@ clean:
 re: clean all
 
 run:
-	./$(NAME)
+	./$(OBJ_DIR)$(NAME)
 
 .PHONY: all clean re run
