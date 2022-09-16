@@ -67,7 +67,6 @@ bool MouseListener::isDragging() {
 bool MouseListener::mouseButtonDown(int button) {
     if (button < mouseButtonLength) {
         return mouseButtonPressed[button];
-    } else {
-        return false;
     }
+    return false;
 }

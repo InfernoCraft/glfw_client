@@ -4,19 +4,24 @@
 
 class Window {
 private:
-    int width, height;
-    const char* title;
     static Window window;
+    const char* title;
+    int width, height;
+
     void init();
     void loop();
 
-
 public:
     GLFWwindow* glfwWindow;
-    static void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods);
     float r, g, b, a;
-    void run();
+
+    // define standard values
     Window();
+
+    // initializations and native loop
+    void run();
+    // void function collapses on error
+    void errorHandling(const char* desc);
 };
 
 #endif

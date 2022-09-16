@@ -4,6 +4,5 @@ int main()
 {
     Window window = Window();
     window.run();
-
     return 0;
 }

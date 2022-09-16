@@ -17,16 +17,16 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="745b74b6-e426-40a6-ada1-12b664e43e88" name="Changes" comment="God FUCKIGNü0ßfosdj0op&lt;isdhfoiuapÜHOIFGSJ">
-      <change afterPath="$PROJECT_DIR$/include/MouseListener.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/MouseListener.cpp" afterDir="false" />
+    <list default="true" id="745b74b6-e426-40a6-ada1-12b664e43e88" name="Changes" comment="added input">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/BunkerGame.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/BunkerGame.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/KeyListener.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/KeyListener.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/MouseListener.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/MouseListener.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/Window.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Window.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/incs.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/incs.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core/KeyListener.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/KeyListener.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/MouseListener.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/MouseListener.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core/Window.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/Window.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,7 +169,21 @@
       <option name="project" value="LOCAL" />
       <updated>1663354509505</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added input">
+      <created>1663362841893</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1663362841893</updated>
+    </task>
+    <task id="LOCAL-00005" summary="added input">
+      <created>1663362953253</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1663362953253</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,6 +203,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fixed pherlos' Bunkers Hell" />
     <MESSAGE value="God FUCKIGNü0ßfosdj0op&lt;isdhfoiuapÜHOIFGSJ" />
-    <option name="LAST_COMMIT_MESSAGE" value="God FUCKIGNü0ßfosdj0op&lt;isdhfoiuapÜHOIFGSJ" />
+    <MESSAGE value="added input" />
+    <option name="LAST_COMMIT_MESSAGE" value="added input" />
   </component>
 </project>
