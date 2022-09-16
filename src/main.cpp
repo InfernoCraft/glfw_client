@@ -1,8 +1,11 @@
 #include "../include/incs.h"
-#include "../GLFW/include/glfw3.h"
 
 int main(void)
 {
+    Window* glfwWindow = Window::get();
+    glfwWindow->run();
+    return 0;
+
     GLFWwindow* window;
 
     /* Initialize the library */
@@ -36,5 +39,6 @@ int main(void)
     }
 
     glfwTerminate();
+
     return 0;
 }

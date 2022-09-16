@@ -1,6 +1,5 @@
-//
-// Created by p.gutsche on 16.09.2022.
-//
+#include "../include/incs.h"
+
 
 class Window {
 private:
@@ -30,7 +29,15 @@ public:
     }
 
     void run() {
-        init();
-        loop();
+        //init();
+        //loop();
+
+        //Memory freeing
+        glfwFreeCallbacKs(glfwWindow);
+        glfwDestroyWindow(glfwWindow);
+
+        //terminate everything
+        //g
+
     }
 };
