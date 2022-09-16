@@ -11,4 +11,4 @@ class main {
 };
 
 
-#endif //GLFW_CLIENT_MAIN_H
+#endif GLFW_CLIENT_MAIN_H

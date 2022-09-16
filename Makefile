@@ -1,37 +1,33 @@
 SRC_DIR = src/
 OBJ_DIR = bin/
-INC_DIR = include/
+INC_DIR = include
 
-NAME = game.exe
+NAME = BunkerGame.exe
 
-SRCS := $(wildcard $(SRC_DIR)/*.cpp)
-OBJS = $(addprefix $(OBJ_DIR), $(SRCS:.c=.o))
+SRCS = $(SRC_DIR)*.cpp
 
 CC = g++
-CFLAGS = -Wall -Wextra -Wpedantic -g -I$(INC_DIR)
-LFLAGS = -lglfw3
+CFLAGS = -Wall -Wextra -Wpedantic -g -I"$(INC_DIR)"
+LFLAGS = -lglfw3 -L$(LLDFLAGS) -lopengl32 -lgdi32 -luser32
 
 LLDFLAGS = -L"GLFW/lib"
 LINCFLAGS = -I"GLFW/include"
 
 all: $(NAME)
 
-$(NAME): $(OBJ_DIR) $(OBJS)
-	$(CC) $(LLDFLAGS) $(LINCFLAGS) $(CFLAGS) $(OBJS) $(LFLAGS) -o $(OBJ_DIR)$(NAME)
+$(NAME): $(OBJ_DIR)
+	$(CC) $(LLDFLAGS) $(LINCFLAGS) $(CFLAGS) $(OBJS) $(SRCS) -o $(OBJ_DIR)$(NAME) $(LFLAGS)
 
-$(OBJ_DIR)%.o: $(SRC_DIR)%.c
-	$(CC) $(CFLAGS) -c $< -o $@
 
 $(OBJ_DIR):
 	@mkdir -p $(OBJ_DIR)
 
 clean:
-	rm -rf $(OBJ_DIR)/*.o
 	rm -f $(OBJ_DIR)$(NAME)
 
 re: clean all
 
-run:
+run: all
 	./$(OBJ_DIR)$(NAME)
 
 .PHONY: all clean re run

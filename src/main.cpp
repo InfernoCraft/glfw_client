@@ -1,4 +1,4 @@
-#include "../include/incs.h"
+//#include "../include/incs.h"
 #include "../GLFW/include/glfw3.h"
 
 int main(void)
@@ -10,7 +10,7 @@ int main(void)
         return -1;
 
     /* Create a windowed mode window and its OpenGL context */
-    window = glfwCreateWindow(640, 480, "Hello World", NULL, NULL);
+    window = glfwCreateWindow(1920, 1080, "BunkerGame", NULL, NULL);
     if (!window)
     {
         glfwTerminate();
@@ -23,8 +23,10 @@ int main(void)
     /* Loop until the user closes the window */
     while (!glfwWindowShouldClose(window))
     {
-        /* Render here */
+        /* clear screen */
         glClear(GL_COLOR_BUFFER_BIT);
+
+        // insert render shit here
 
         /* Swap front and back buffers */
         glfwSwapBuffers(window);
