@@ -1,22 +1,12 @@
-//
-// Created by pasca on 15.09.2022.
-//
-#ifndef GLFW_CLIENT_MAIN_H
-#define GLFW_CLIENT_MAIN_H
+#pragma once
+#ifndef GLFW_CLIENT_INCS_H
+#define GLFW_CLIENT_INCS_H
+
+#include <string>
+#include <iostream>
+
 #include "../GLFW/include/glfw3.h"
+#include "Window.h"
+#include "KeyListener.h"
 
-class main {
-
-};
-
-class Window {
-private:
-    Window();
-
-public:
-    static Window* get();
-    void run();
-};
-
-
-#endif //GLFW_CLIENT_MAIN_H
+#endif

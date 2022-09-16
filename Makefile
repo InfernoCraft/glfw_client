@@ -4,7 +4,9 @@ INC_DIR = include
 
 NAME = BunkerGame.exe
 
-SRCS = $(SRC_DIR)*.cpp
+SRCS = $(SRC_DIR)*.cpp $(SRC_DIR)core/*.cpp
+
+PROGS = $(patsubst %.cpp,%,$(SRCS))
 
 CC = g++
 CFLAGS = -Wall -Wextra -Wpedantic -g -I"$(INC_DIR)"
@@ -16,6 +18,7 @@ LINCFLAGS = -I"GLFW/include"
 all: $(NAME)
 
 $(NAME): $(OBJ_DIR)
+	echo $(SRCS)
 	$(CC) $(LLDFLAGS) $(LINCFLAGS) $(CFLAGS) $(OBJS) $(SRCS) -o $(OBJ_DIR)$(NAME) $(LFLAGS)
 
 
