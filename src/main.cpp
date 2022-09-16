@@ -1,4 +1,4 @@
-//#include "../include/incs.h"
+#include "../include/incs.h"
 #include "../GLFW/include/glfw3.h"
 
 int main(void)

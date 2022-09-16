@@ -10,5 +10,9 @@ class main {
 
 };
 
+class Window {
 
-#endif GLFW_CLIENT_MAIN_H
+};
+
+
+#endif //GLFW_CLIENT_MAIN_H
