@@ -9,7 +9,7 @@ SRCS = $(SRC_DIR)*.cpp $(SRC_DIR)core/*.cpp
 PROGS = $(patsubst %.cpp,%,$(SRCS))
 
 CC = g++
-CFLAGS = -Wall -Wextra -Wpedantic -g -I"$(INC_DIR)"
+CFLAGS = -Wextra -Wpedantic -g -I"$(INC_DIR)"
 LFLAGS = -lglfw3 -L$(LLDFLAGS) -lopengl32 -lgdi32 -luser32
 
 LLDFLAGS = -L"GLFW/lib"

@@ -28,17 +28,24 @@ void Window::init() {
         return;
     }
 
-    glfwSetKeyCallback(Window::glfwWindow, this->keyCallback);
+    //KeyListener::keyListener = KeyListener();
+    glfwSetKeyCallback(Window::glfwWindow, KeyListener::keyCallback);
+    glfwSetMouseButtonCallback(Window::glfwWindow, MouseListener::mouseButtonCallback);
+    glfwSetScrollCallback(Window::glfwWindow, MouseListener::mouseScrollCallback);
+    glfwSetCursorPosCallback(Window::glfwWindow, MouseListener::mousePosCallback);
 
     //OpenGl context current
     glfwMakeContextCurrent(Window::glfwWindow);
 
     //Enable v-sync
-    glfwSwapInterval(GLFW_TRUE);
-
+    glfwSwapInterval(1);
 }
 
 void Window::loop() {
+    float beginTime = (float)glfwGetTime();
+    float endTime;
+    float deltaTime = -1.0f;
+
     while(!glfwWindowShouldClose(Window::glfwWindow)) {
         //Poll events
         glfwPollEvents();
@@ -47,11 +54,16 @@ void Window::loop() {
         glClearColor(Window::r, Window::g, Window::b, Window::a);
         glClear(GL_COLOR_BUFFER_BIT);
 
+        //std::cout << 1/deltaTime << std::endl;
+
+        if (MouseListener::mouseButtonDown(GLFW_MOUSE_BUTTON_1)) {
+            std::cout<<"test" << std::endl;
+        }
 
         glfwSwapBuffers(Window::glfwWindow);
-    }
-}
 
-void Window::keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods) {
-    std::cout << key;
+        endTime = (float)glfwGetTime();
+        deltaTime = endTime - beginTime;
+        beginTime = endTime;
+    }
 }

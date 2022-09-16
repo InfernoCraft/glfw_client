@@ -17,7 +17,6 @@ public:
     float r, g, b, a;
     void run();
     Window();
-
 };
 
 #endif
