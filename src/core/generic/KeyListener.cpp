@@ -1,4 +1,4 @@
-#include "../../include/incs.h"
+#include "../../../include/incs.h"
 
 // static definition is needed for using it without an instance
 // they may not be utilized in declarations (.cpp files)

@@ -1,4 +1,4 @@
-#include "../../include/incs.h"
+#include "../../../include/incs.h"
 
 Window::Window() {
     // declaration of standard values

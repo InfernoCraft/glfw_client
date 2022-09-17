@@ -1,12 +1,10 @@
-SRC_DIR = src/
+SRC_DIR = src
 OBJ_DIR = bin/
 INC_DIR = include
 
 NAME = BunkerGame.exe
 
-SRCS = $(SRC_DIR)*.cpp $(SRC_DIR)core/*.cpp
-
-PROGS = $(patsubst %.cpp,%,$(SRCS))
+SRCS = $(SRC_DIR)/*.cpp $(SRC_DIR)/core/generic/*.cpp
 
 CC = g++
 CFLAGS = -Wextra -Wpedantic -g -I"$(INC_DIR)"
