@@ -4,7 +4,7 @@ INC_DIR = include
 
 NAME = BunkerGame.exe
 
-SRCS = $(SRC_DIR)/*.cpp $(SRC_DIR)/core/generic/*.cpp
+SRCS = $(SRC_DIR)/*.cpp $(SRC_DIR)/core/generic/*.cpp $(SRC_DIR)/game/scenes/*.cpp
 
 CC = g++
 CFLAGS = -Wextra -Wpedantic -g -I"$(INC_DIR)"

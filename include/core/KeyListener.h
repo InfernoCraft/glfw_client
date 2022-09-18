@@ -1,6 +1,6 @@
 #ifndef GLFW_CLIENT_KEYLISTENER_H
 #define GLFW_CLIENT_KEYLISTENER_H
-#include "incs.h"
+#include "../incs.h"
 
 class KeyListener {
 public:

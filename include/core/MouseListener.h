@@ -1,6 +1,6 @@
 #ifndef GLFW_CLIENT_MOUSELISTENER_H
 #define GLFW_CLIENT_MOUSELISTENER_H
-#include "incs.h"
+#include "../incs.h"
 
 class MouseListener {
 public:

@@ -2,7 +2,6 @@
 
 int main()
 {
-    Window window = Window();
-    window.run();
+    Window::getWindow()->run();
     return 0;
 }

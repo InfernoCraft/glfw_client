@@ -1,23 +1,42 @@
 #include "../../../include/incs.h"
 
+static Window* window;
+
+
+
 Window::Window() {
     // declaration of standard values
-    Window::width = 1920;
-    Window::height = 1280;
-    Window::title = "game";
-    Window::r = 0;
-    Window::g = 0;
-    Window::b = 0;
-    Window::a = 1;
+    width = 1920;
+    height = 1280;
+    title = "game";
+    r = 0;
+    g = 0;
+    b = 0;
+    a = 1;
+}
+
+Window* Window::getWindow() {
+    if (not window) {
+        window = new Window();
+    }
+    return window;
+}
+
+Scene* Window::getScene() {
+    return currentScene;
+}
+
+void Window::changeScene(Scene* newScene) {
+    currentScene = newScene;
 }
 
 void Window::run() {
     // functions that are mandatory to be called
-    Window::init();
-    Window::loop();
+    init();
+    loop();
 
     //destroy window and free memory
-    glfwDestroyWindow(Window::glfwWindow);
+    glfwDestroyWindow(glfwWindow);
     // quit glfw
     glfwTerminate();
 }
@@ -25,7 +44,7 @@ void Window::run() {
 void Window::errorHandling(const char* desc) {
     // every error code (above 1, as 0 is not an error code) will be treated as an error -> exit program
     if(glfwGetError((const char**)desc) >= 1) {
-        glfwDestroyWindow(Window::glfwWindow);
+        glfwDestroyWindow(glfwWindow);
         glfwTerminate();
         exit(-1);
     }
@@ -36,7 +55,7 @@ void Window::init() {
     if (!glfwInit()) errorHandling("Could not initialize glfw library: ");
 
     // create window
-    Window::glfwWindow = glfwCreateWindow(Window::width, Window::height, Window::title, NULL, NULL);
+    glfwWindow = glfwCreateWindow(Window::width, Window::height, Window::title, NULL, NULL);
 
     //self-explanatory
     if (!Window::glfwWindow) {
@@ -45,19 +64,25 @@ void Window::init() {
 
     // set listener with callback functions
     // keyboard pressing
-    glfwSetKeyCallback(Window::glfwWindow, KeyListener::keyCallback);
+    glfwSetKeyCallback(glfwWindow, KeyListener::keyCallback);
     // mouse button pressing
-    glfwSetMouseButtonCallback(Window::glfwWindow, MouseListener::mouseButtonCallback);
+    glfwSetMouseButtonCallback(glfwWindow, MouseListener::mouseButtonCallback);
     // mouse scrolling
-    glfwSetScrollCallback(Window::glfwWindow, MouseListener::mouseScrollCallback);
+    glfwSetScrollCallback(glfwWindow, MouseListener::mouseScrollCallback);
     // mouse movement
-    glfwSetCursorPosCallback(Window::glfwWindow, MouseListener::mousePosCallback);
+    glfwSetCursorPosCallback(glfwWindow, MouseListener::mousePosCallback);
 
     //OpenGl context current
-    glfwMakeContextCurrent(Window::glfwWindow);
+    glfwMakeContextCurrent(glfwWindow);
 
     //Enable v-sync
     glfwSwapInterval(1);
+
+    //enables that gl blends textures right if they have an alpha channel
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
+
+    changeScene(new TestScene());
 }
 
 void Window::loop() {
@@ -71,13 +96,16 @@ void Window::loop() {
         glfwPollEvents();
 
         //clear color buffer
-        glClearColor(Window::r, Window::g, Window::b, Window::a);
+        glClearColor(r, g, b, Window::a);
         glClear(GL_COLOR_BUFFER_BIT);
 
         // TODO: implement scenes
+        if (deltaTime >= 0) {
+            currentScene->update(deltaTime);
+        }
 
-        // display deltatime (frametime)
-        std::cout << "FPS: " << 1/deltaTime << std::endl;
+
+        //std::cout << "FPS: " << 1/deltaTime << std::endl;
 
         // keyboard input
         if(KeyListener::isKeyPressed(GLFW_KEY_SPACE)) {
@@ -89,7 +117,7 @@ void Window::loop() {
         }
 
         // switch front buffer with back buffer
-        glfwSwapBuffers(Window::glfwWindow);
+        glfwSwapBuffers(glfwWindow);
 
         // dt calculations
         // get passed time, subtract it to get the current frame time, then start with endTime (most updated time)

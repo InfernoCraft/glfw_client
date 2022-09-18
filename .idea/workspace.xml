@@ -17,13 +17,20 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="745b74b6-e426-40a6-ada1-12b664e43e88" name="Changes" comment="cleaned code">
+    <list default="true" id="745b74b6-e426-40a6-ada1-12b664e43e88" name="Changes" comment="changed code hirachy">
+      <change afterPath="$PROJECT_DIR$/include/core/Scene.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/game/TestScene.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/generic/Scene.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/game/scenes/TestScene.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/BunkerGame.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/BunkerGame.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/KeyListener.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/generic/KeyListener.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/MouseListener.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/generic/MouseListener.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/Window.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/generic/Window.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/KeyListener.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/core/KeyListener.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/MouseListener.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/core/MouseListener.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/Window.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/core/Window.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/incs.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/incs.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/generic/Window.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/generic/Window.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,17 +105,14 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\pasca\Desktop\gittea\glfw_client\include\game" />
+      <recent name="C:\Users\pasca\Desktop\gittea\glfw_client\include\core" />
+      <recent name="C:\Users\pasca\Desktop\gittea\glfw_client\include" />
       <recent name="C:\Users\pasca\Desktop\gittea\glfw_client\src\core" />
       <recent name="C:\Users\pasca\Desktop\gittea\glfw_client\src\core\generic" />
-      <recent name="C:\Users\pasca\Desktop\gittea\glfw_client\include" />
     </key>
   </component>
   <component name="RunManager" selected="Makefile Application.run">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="BunkerGame.exe" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="glfw_client" TARGET_NAME="BunkerGame.exe" CONFIG_NAME="BunkerGame.exe" version="1">
       <method v="2">
         <option name="CLION.COMPOUND.BUILD" enabled="true" />
@@ -129,6 +133,11 @@
         <option name="CLION.COMPOUND.BUILD" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Makefile Application.all" />
       <item itemvalue="Makefile Application.re" />
@@ -146,7 +155,8 @@
       <updated>1663306645353</updated>
       <workItem from="1663306653127" duration="8765000" />
       <workItem from="1663321555618" duration="1399000" />
-      <workItem from="1663439984576" duration="1507000" />
+      <workItem from="1663439984576" duration="2124000" />
+      <workItem from="1663505846191" duration="9250000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed pherlos' Bunkers Hell">
       <created>1663313984598</created>
@@ -190,7 +200,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663365445586</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="changed code hirachy">
+      <created>1663442226790</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1663442226790</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,6 +229,7 @@
     <MESSAGE value="God FUCKIGNü0ßfosdj0op&lt;isdhfoiuapÜHOIFGSJ" />
     <MESSAGE value="added input" />
     <MESSAGE value="cleaned code" />
-    <option name="LAST_COMMIT_MESSAGE" value="cleaned code" />
+    <MESSAGE value="changed code hirachy" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed code hirachy" />
   </component>
 </project>
