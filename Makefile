@@ -10,8 +10,8 @@ CC = g++
 CFLAGS = -Wextra -Wpedantic -g -I"$(INC_DIR)"
 LFLAGS = -lglfw3 -L$(LLDFLAGS) -lopengl32 -lgdi32 -luser32
 
-LLDFLAGS = -L"GLFW/lib"
-LINCFLAGS = -I"GLFW/include"
+LLDFLAGS = -L"lib/GLFW/lib"
+LINCFLAGS = -I"lib/GLFW/include"
 
 all: $(NAME)
 
