@@ -99,21 +99,9 @@ void Window::loop() {
         glClearColor(r, g, b, Window::a);
         glClear(GL_COLOR_BUFFER_BIT);
 
-        // TODO: implement scenes
+        // SCENES
         if (deltaTime >= 0) {
             currentScene->update(deltaTime);
-        }
-
-
-        //std::cout << "FPS: " << 1/deltaTime << std::endl;
-
-        // keyboard input
-        if(KeyListener::isKeyPressed(GLFW_KEY_SPACE)) {
-            // do some shit here
-        }
-        //mouse input
-        if (MouseListener::mouseButtonDown(GLFW_MOUSE_BUTTON_1)) {
-            // do shit here
         }
 
         // switch front buffer with back buffer
