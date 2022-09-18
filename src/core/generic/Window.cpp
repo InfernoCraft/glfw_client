@@ -2,8 +2,6 @@
 
 static Window* window;
 
-
-
 Window::Window() {
     // declaration of standard values
     width = 1920;
@@ -28,6 +26,7 @@ Scene* Window::getScene() {
 
 void Window::changeScene(Scene* newScene) {
     currentScene = newScene;
+    currentScene->init();
 }
 
 void Window::run() {
@@ -55,7 +54,7 @@ void Window::init() {
     if (!glfwInit()) errorHandling("Could not initialize glfw library: ");
 
     // create window
-    glfwWindow = glfwCreateWindow(Window::width, Window::height, Window::title, NULL, NULL);
+    glfwWindow = glfwCreateWindow(width, height, title, NULL, NULL);
 
     //self-explanatory
     if (!Window::glfwWindow) {
@@ -82,7 +81,7 @@ void Window::init() {
     glEnable(GL_BLEND);
     glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
 
-    changeScene(new TestScene());
+    changeScene(new GameLoadingScene());
 }
 
 void Window::loop() {

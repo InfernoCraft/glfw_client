@@ -16,7 +16,6 @@ LINCFLAGS = -I"GLFW/include"
 all: $(NAME)
 
 $(NAME): $(OBJ_DIR)
-	echo $(SRCS)
 	$(CC) $(LLDFLAGS) $(LINCFLAGS) $(CFLAGS) $(OBJS) $(SRCS) -o $(OBJ_DIR)$(NAME) $(LFLAGS)
 
 
